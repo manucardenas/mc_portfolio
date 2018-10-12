@@ -79,7 +79,8 @@ main {
   grid-gap: 30px;
   grid-template-areas:
   'bioimage bio bio'
-  'job1 job2 job3';
+  '. experience .'
+  'job1 job2 .';
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -87,13 +88,19 @@ main {
     margin: auto;
     border-radius: 50%;
     border: $secondary-color 3px solid;
-    height: 35vh;
-    width: 35vh;
+    height: 45vh;
+    width: auto;
   }
 
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
+  }
+
+  .experience {
+    grid-area: experience;
+    font-size: 1.5rem;
+
   }
 
   .job-1 {
@@ -104,14 +111,15 @@ main {
     grid-area: job2;
   }
 
-  .job-3 {
-    grid-area: job3;
-  }
+  // .job-3 {
+  //   grid-area: job3;
+  // }
 
   .job {
-    background: lighten($primary-color, 5);
+    background: lighten($primary-color, 3);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+    font-size: 1.2rem;
   }
 }
 
@@ -137,7 +145,7 @@ main {
 //Contact Page
 .boxes{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
